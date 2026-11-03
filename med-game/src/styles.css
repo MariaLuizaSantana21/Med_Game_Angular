@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.barra-de-navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(60, 109, 109);
+    color: aliceblue;
+    box-shadow: 0 4px 7px -3px rgb(168, 185, 185);
+
+}
+.links-menu{
+    display: flex;
+    gap: 25px;
+}
+.link{
+    text-decoration: none;
+    color: aliceblue;
+}
+.link:hover{
+    color: rgb(117, 159, 196);
+}
