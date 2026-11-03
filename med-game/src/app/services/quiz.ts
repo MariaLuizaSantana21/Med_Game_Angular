@@ -1,4 +1,15 @@
-import { Service } from '@angular/core';
+import { Service, signal } from '@angular/core';
+import { Pergunta } from '../models/pergunta.model';
 
 @Service()
-export class Quiz {}
+export class Quiz {
+    perguntas = signal<Pergunta[]>(
+        [{id: 1, pergunta: 'Quantos ossos o corpo humano tem?', alternativas: ['a) 207', 'b) 200', 'c) 198', 'd)206'], resposta: 4, explicacao: 'O corpo humano adulto possui 206 ossos.' },
+         {id: 2, pergunta: 'Qual é o instrumento usado pelos cirurgiões para fazer incisões?', alternativas: ['a) Seringa', 'b) Bisturi', 'c) Gase', 'd)Agulha'], resposta: 2, explicacao: 'O instrumento usado pelos cirurgiões para fazer incisões é o bisturi.' }
+        ]
+    );
+
+    indiceAtual = signal(0);
+    pontuacao = signal(0);
+    statusJogo = signal('inicio')
+}
