@@ -1,4 +1,4 @@
-import { Service, signal } from '@angular/core';
+import { Service, signal, computed } from '@angular/core';
 import { Pergunta } from '../models/pergunta.model';
 
 @Service()
@@ -12,4 +12,5 @@ export class Quiz {
     indiceAtual = signal(0);
     pontuacao = signal(0);
     statusJogo = signal('inicio')
+    perguntaAtual = computed(() => this.perguntas()[this.indiceAtual()]);
 }

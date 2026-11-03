@@ -1,7 +1,7 @@
 export interface Pergunta{
     id: number;
     pergunta: string;
-    alternativas: Array<string>;
+    alternativas: string[];
     resposta: number;
     explicacao: string;
 }
