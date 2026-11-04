@@ -13,6 +13,7 @@ export class Home {
   private router = inject(Router);
 
   iniciarQuiz(){
-    
+    this.quiz.iniciarOuReiniciarJogo();
+    this.router.navigate(['/quiz'])
   }
 }

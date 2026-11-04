@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { QuizService } from '../../services/quiz';
 
 @Component({
@@ -10,4 +10,12 @@ import { QuizService } from '../../services/quiz';
 })
 export class Quiz {
   quiz = inject(QuizService);
+  private router = inject(Router);
+
+  escolherResposta(indice: number){
+    this.quiz.responder(indice);
+    if(this.quiz.statusJogo()=== 'finalizado'){
+      this.router.navigate(['/result']);
+    }
+  }
 }
