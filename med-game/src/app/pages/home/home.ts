@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Quiz } from '../../services/quiz';
+import { Router, RouterLink } from '@angular/router';
+import { QuizService } from '../../services/quiz';
 
 @Component({
   imports: [RouterLink],
@@ -9,5 +9,10 @@ import { Quiz } from '../../services/quiz';
   templateUrl: './home.html',
 })
 export class Home {
-  quiz = inject(Quiz)
+  quiz = inject(QuizService)
+  private router = inject(Router);
+
+  iniciarQuiz(){
+    
+  }
 }

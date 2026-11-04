@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { QuizService } from '../../services/quiz';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-quiz',
   styleUrl: './quiz.css',
   templateUrl: './quiz.html',
 })
-export class Quiz {}
+export class Quiz {
+  quiz = inject(QuizService);
+}
