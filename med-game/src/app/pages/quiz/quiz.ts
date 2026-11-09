@@ -14,7 +14,7 @@ export class Quiz {
 
   escolherResposta(indice: number){
     this.quiz.responder(indice);
-    if(this.quiz.statusJogo()=== 'finalizado'){
+    if(this.quiz.statusJogo() === 'finalizado'){
       this.router.navigate(['/result']);
     }
   }

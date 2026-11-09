@@ -8,6 +8,6 @@ import { Result } from './pages/result/result';
 export const routes: Routes = [
     { path: '', component: Home, title: 'Inicio'},
     { path: 'quiz', component: Quiz, title: 'Quiz'},
-    { path: 'resultado', component: Result, title: 'Resultados'},
+    { path: 'result', component: Result, title: 'Resultados'},
     { path: 'nova-pergunta', component: NovaPergunta, title: 'Nova pergunta'},
 ];

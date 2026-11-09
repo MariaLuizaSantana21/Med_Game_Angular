@@ -20,17 +20,20 @@ export class QuizService {
         this.statusJogo.set('jogando');
     }
 
-    responder(indice: number){
+    responder(resposta: number){
         let pergunta = this.perguntaAtual();
         const totalPerguntas = this.perguntas().length;
-        if(indice === pergunta.resposta && this.indiceAtual()){
+
+        if(resposta === pergunta.resposta){
             this.pontuacao.update(pont => pont + 1);
-            this.indiceAtual.update(ind => ind + 1);
-        } else{
-            this.indiceAtual.update(ind => ind + 1);
         }
-        if(this.indiceAtual() === totalPerguntas){
+
+        if(this.indiceAtual()+1 === totalPerguntas){
             this.statusJogo.set('finalizado');
         }
+        else{
+            this.indiceAtual.update(ind => ind +1);
+        }
+
     }
 }
