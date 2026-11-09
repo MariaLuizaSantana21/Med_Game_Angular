@@ -1,18 +1,21 @@
-<div class ="perguntas">
+<div class = "titulo-pergunta">
     <h1>Perguntas</h1>
-    <p class = "nome-pergunta">{{quiz.perguntaAtual()?.pergunta}}</p>
-    <p>{{quiz.perguntaAtual().alternativas}}</p>
-    <button type ="button" (click)= "escolherResposta(0)">
-        Letra A
-    </button>
-    <button type ="button" (click)= "escolherResposta(1)">
-        Letra B
-    </button>
-    <button type ="button" (click)= "escolherResposta(2)">
-        Letra C
-    </button>
-    <button type ="button" (click)= "escolherResposta(3)">
-        Letra D
-    </button>
-    <p> pontos: {{quiz.pontuacao()}}</p>
 </div>
+<div class ="pergunta">
+    <p class = "nome-pergunta">{{quiz.perguntaAtual()?.pergunta}}</p>
+</div>
+<div class = "perguntas">
+    <button class="botao" type ="button" (click)= "escolherResposta(0)">
+        {{quiz.perguntaAtual().alternativas[0]}}
+    </button>
+    <button class="botao" type ="button" (click)= "escolherResposta(1)">
+        {{quiz.perguntaAtual().alternativas[1]}}
+    </button>
+    <button class="botao" type ="button" (click)= "escolherResposta(2)">
+        {{quiz.perguntaAtual().alternativas[2]}}
+    </button>
+    <button class="botao" type ="button" (click)= "escolherResposta(3)">
+        {{quiz.perguntaAtual().alternativas[3]}}
+    </button>
+</div>
+<p> pontos: {{quiz.pontuacao()}}</p>
