@@ -1,1 +1,12 @@
-<p>result works!</p>
+<div class = "titulo-pergunta">
+    <h1>Resultado:</h1>
+</div>
+<div class ="pontos">
+    <p> Você acertou um total de {{quiz.pontuacao()}} de {{quiz.totalPerguntas()}} pontos!</p>
+</div>
+<div class = "jogar-novamente">
+    <button class="botao" type ="button" (click)= "jogarNovamente()">
+        Jogar Novamente
+    </button>
+</div>
+

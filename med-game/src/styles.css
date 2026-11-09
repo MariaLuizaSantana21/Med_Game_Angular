@@ -1,6 +1,11 @@
 /*@import "tailwindcss";*/
+
+
+/* --------------Header------------------*/
+
 .barra-de-navegacao{
     display: flex;
+    font-size: 20px;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -21,15 +26,29 @@
     color: rgb(117, 159, 196);
 }
 
+
+
+/* --------------Pagina inicial------------------*/
+
 .titulo-pergunta, .pagina-inicial{
     text-align: center;
     color: rgb(43, 45, 46);
+}
+
+
+
+/* --------------Quiz------------------*/
+
+.nome-perguntas{
+    display: flex;
+    gap: 25px;
 }
 
 .perguntas, .pergunta{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-size: 25px;
     padding: 10px 20px;
@@ -39,19 +58,46 @@
     border-radius: 10px;
 
 }
+
+
+
+
+/* --------------Resultados------------------*/
+
+.pontos{
+    font-size: 25px;
+    padding: 10px 20px;
+    background-color: rgb(201, 212, 221);
+    color: rgb(43, 45, 46);
+    text-align: center;
+}
+
+.jogar-novamente{
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+
+
+/* --------------Botões------------------*/
+
 .botao{
     font-size: 25px;
     background-color: rgb(50, 143, 143);
    
     border-radius: 8px;
     color: aliceblue;
+    box-shadow: 0 4px 12px rgba(122, 121, 145, 0.3);
 }
 
 .botao:hover{
-    background-color: rgb(1, 23, 53);
+    background-color: rgb(1, 50, 53);
+    transform: translateY(-1px);
+    
 }
 
-.nome-perguntas{
-    display: flex;
-    gap: 25px;
+.botao:active{
+    transform: translateY(2px);
 }
+
