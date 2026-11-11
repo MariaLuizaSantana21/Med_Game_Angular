@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './nova-pergunta.css',
   templateUrl: './nova-pergunta.html',
 })
-export class NovaPergunta {}
+export class NovaPergunta {
+  
+}

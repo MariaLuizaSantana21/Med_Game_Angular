@@ -2,6 +2,7 @@
     <h1>Resultado:</h1>
 </div>
 <div class ="pontos">
+    <p>{{quiz.pontuacao() == quiz.totalPerguntas()? 'Parabéns!': 'Quase lá!' }}</p>
     <p> Você acertou um total de {{quiz.pontuacao()}} de {{quiz.totalPerguntas()}} pontos!</p>
 </div>
 <div class = "jogar-novamente">
