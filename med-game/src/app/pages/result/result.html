@@ -2,8 +2,14 @@
     <h1>Resultado:</h1>
 </div>
 <div class ="pontos">
-    <p>{{quiz.pontuacao() == quiz.totalPerguntas()? 'Parabéns!': 'Quase lá!' }}</p>
-    <p> Você acertou um total de {{quiz.pontuacao()}} de {{quiz.totalPerguntas()}} pontos!</p>
+    @if(quiz.pontuacao() == quiz.totalPerguntas()){
+         <p> Parabéns!</p>
+         <p>Você acertou um total de {{quiz.pontuacao()}} de {{quiz.totalPerguntas()}} pontos!</p>
+    }
+    @else {
+        <p> Quase lá!</p>
+         <p>Você acertou um total de {{quiz.pontuacao()}} de {{quiz.totalPerguntas()}} pontos</p>
+    }
 </div>
 <div class = "jogar-novamente">
     <button class="botao" type ="button" (click)= "jogarNovamente()">
