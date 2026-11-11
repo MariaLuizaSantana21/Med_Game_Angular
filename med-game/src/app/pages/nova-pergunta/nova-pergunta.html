@@ -1,1 +1,31 @@
-<p>nova-pergunta works!</p>
+<div class="titulo-nova-pergunta">
+    <h1>Cadastrar nova pergunta</h1>
+</div>
+<div class="nova-pergunta">
+    <label class="cadastro">
+        id
+        <input type="number" [formField]="meuForm.id" class="campo" />
+    </label>
+    <label class="cadastro">
+        pergunta
+        <input type="pergunta" [formField]="meuForm.pergunta" class="campo" />
+    </label>
+    <!---<label class="cadastro">
+        alternativas
+        <input type="alternativas" [formField]="meuForm.alternativas" class="campo" />
+    </label>
+    --->
+    <label class="cadastro">
+        resposta
+        <input type="number" [formField]="meuForm.resposta" class="campo" />
+    </label>
+    <label>
+        explicação
+        <input type="explicacao" [formField]="meuForm.explicacao" class="campo" />
+    </label>
+
+    <!--<button class="botao" type ="button" (click)= "">
+        Cadastrar nova pergunta
+    </button>
+-->
+</div>
